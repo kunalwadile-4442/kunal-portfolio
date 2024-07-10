@@ -16,7 +16,7 @@ import nodejs from '../images/nodejs_logo.svg';
 import express from '../projectImg/express-js.png';
 import mongodb from '../images/mongodb.svg';
 import c from '../projectImg/C.webp';
-import Fade from 'react-reveal/Fade';
+import Fade from 'react-awesome-reveal';
 
 
 const TechStack = () => {
