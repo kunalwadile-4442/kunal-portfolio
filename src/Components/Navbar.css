@@ -1,0 +1,53 @@
+.navbar {
+    width: 80%;
+    right: 100;
+    left: 100;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 0;
+    position: fixed;
+    backdrop-filter: blur(4px);
+    z-index: 100;
+}
+
+
+.links {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.links a:hover {
+    background: linear-gradient(90deg, #1487cc -2.06%, #E70FAA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: 0.5s;
+}
+
+a img {
+    width: 2vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .links {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: center;
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+    .logo h1{
+        font-size: 1em;
+    }
+}
