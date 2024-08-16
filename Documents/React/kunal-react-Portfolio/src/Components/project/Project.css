@@ -1,0 +1,53 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 20vw;
+    margin: 2% 0;
+    background-color: #fff;
+    box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+    margin-bottom: 5vh;
+
+}
+
+.project-img img {
+    width: 20vw;
+    border-radius: 20px 20px 0 0;
+}
+
+.project-desc {
+    line-height: 2;
+    padding: 4%;
+    text-align: left;
+}
+
+.project-heading{
+    font-family: poppins-bold;
+    color: #000;
+    text-align: center;
+}
+
+.project-links{
+    display: inline-flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 2% 0;
+}
+
+.project-links a{
+    font-size: 0.8em;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px){
+    .project{
+        width: 100%;
+        margin-top: 10%;
+        margin-bottom: 0;
+    }
+    .project-img img{
+        width: 100%;
+    }
+}
