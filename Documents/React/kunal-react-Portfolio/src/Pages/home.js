@@ -22,13 +22,13 @@ const Home = () => {
                                 }}
                                 onInit={(typewriter) => {
                                     typewriter
-                                        .typeString('Software Engineer')
+                                        .typeString('Software Developer')
                                         .pauseFor(1000)
                                         .deleteAll()
-                                        .typeString('Fullstack Developer')
+                                        .typeString('React Developer')
                                         .pauseFor(1000)
                                         .deleteAll()
-                                        .typeString('Problem Solver')
+                                        .typeString('TypeScript Dev...')
                                         .pauseFor(1000)
                                         .start();
                                 }}

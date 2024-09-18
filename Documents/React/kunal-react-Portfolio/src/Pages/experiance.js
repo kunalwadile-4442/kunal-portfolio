@@ -6,7 +6,7 @@ const Experience = () => {
   const experiences = [
     {
       company: "Appristine Technology",
-      role: "Trainee Software Engineer",
+      role: "Software Developer",
       duration: "July 2024 - Present",
       description: "Actively engaged in developing scalable applications using TypeScript, Redux, and Redux Toolkit within React.js and Next.js environments. Enhanced code maintainability and performance, leading to a 35% improvement in application efficiency and a 25% increase in user experience. Contributed to key projects with a focus on modern web technologies."
     },
@@ -17,8 +17,6 @@ const Experience = () => {
       description: 'Executed critical frontend and backend development tasks, mastering HTML, CSS, JavaScript, and Bootstrap with 100% proficiency. Enhanced website performance by 40%, reduced load time by 20%, and improved user engagement metrics by 30%'
     },
     
-    
-    // Add more experiences as needed
   ];
 
   return (
