@@ -36,7 +36,7 @@ const Home = () => {
                         </span>
                     </h2>
                     <br />
-                    <a className="btn shine" href="/src/Components/Resume/kunalWadile_9834124682.pdf" download style={{ textDecoration: 'none' }}>Download Resume</a>
+                    <a className="btn shine" href="https://drive.google.com/file/d/11qLf6WiwvySN02VDPIPcTWrP4iY0bHhH/view?usp=sharing" target="_blank" download style={{ textDecoration: 'none' }}>Download Resume</a>
                 </div>
 
                 <div className='mobile'>
@@ -72,7 +72,7 @@ const Home = () => {
                 </div>
                 <div className="mobile">
                     <br />
-                <a className="btn shine" href="/src/Components/Resume/kunalWadile_9834124682.pdf" download style={{ textDecoration: 'none' }}>Download Resume</a>
+                <a className="btn shine" href="https://drive.google.com/file/d/11qLf6WiwvySN02VDPIPcTWrP4iY0bHhH/view?usp=sharing" target="_blank" download style={{ textDecoration: 'none' }}>Download Resume</a>
 
                 </div>
             </div>
