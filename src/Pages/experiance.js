@@ -1,5 +1,4 @@
 import React from 'react';
-// import './experience.css';
 import '../Pages/experiance.css'
 
 const Experience = () => {
@@ -35,7 +34,7 @@ const Experience = () => {
           <h3 className="experience-role">{exp.role}</h3>
           <h4 className="experience-company">{exp.company}</h4>
           <p className="experience-duration">{exp.duration}</p>
-          <p className="experience-description">{exp.description}</p>
+          <p className="">{exp.description}</p>
         </div>
       ))}
     </div>

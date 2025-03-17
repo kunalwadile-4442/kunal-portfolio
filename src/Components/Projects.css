@@ -1,17 +1,71 @@
-#projects{
-    margin: 5% 0;
+#projects {
+    margin: 5% auto;
     width: 80vw;
+    text-align: center;
 }
 
-.myprojects{
+.myprojects {
     margin: 2% 0;
     display: grid;
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
     justify-items: center;
 }
 
-@media only screen and (max-width: 600px){
-    .myprojects{
-        grid-template-columns: repeat(1,minmax(0,1fr)); 
+.project-card {
+    background: #efefef;
+    border-radius: 10px;
+    padding: 0px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%;
+    max-width: 325px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 2px 18px #716c73;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 180px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 10px;
+}
+
+.project-links {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.project-links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #007bff;
+    margin: 0 8px;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-links a:hover {
+    color: #0056b3;
+}
+
+@media only screen and (max-width: 600px) {
+    .myprojects {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
