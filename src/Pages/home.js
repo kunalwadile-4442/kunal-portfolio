@@ -36,7 +36,16 @@ const Home = () => {
                         </span>
                     </h2>
                     <br />
-                    <a className="btn shine" href="https://drive.google.com/file/d/11vjj-Ds2poY8pZfMmSlm14fRoITyFUeq/view" target="_blank" download style={{ textDecoration: 'none' }}>Download Resume</a>
+                    <a 
+                        className="btn shine" 
+                        href="https://drive.google.com/file/d/11vjj-Ds2poY8pZfMmSlm14fRoITyFUeq/view" 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        download 
+                        style={{ textDecoration: 'none' }}
+                    >
+                        Download Resume
+                    </a>
                 </div>
 
                 <div className='mobile'>
@@ -64,7 +73,6 @@ const Home = () => {
                             />
                         </span>
                     </h2>
-                    
                 </div>
 
                 <div className='profile-img'>
@@ -72,8 +80,16 @@ const Home = () => {
                 </div>
                 <div className="mobile">
                     <br />
-                <a className="btn shine" href="https://drive.google.com/file/d/11vjj-Ds2poY8pZfMmSlm14fRoITyFUeq/view" target="_blank" download style={{ textDecoration: 'none' }}>Download Resume</a>
-
+                    <a 
+                        className="btn shine" 
+                        href="https://drive.google.com/file/d/11vjj-Ds2poY8pZfMmSlm14fRoITyFUeq/view" 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        download 
+                        style={{ textDecoration: 'none' }}
+                    >
+                        Download Resume
+                    </a>
                 </div>
             </div>
             <hr />
