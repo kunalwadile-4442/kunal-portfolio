@@ -1,10 +1,7 @@
 import React from "react";
 import '../Pages/home.css';
 import './Footer.css';
-import { AiFillLinkedin } from 'react-icons/ai';
-// import { AiFillTwitterCircle } from 'react-icons/ai';
-import { AiFillInstagram } from "react-icons/ai";
-import { AiFillGithub } from 'react-icons/ai';
+import { AiFillLinkedin, AiFillInstagram, AiFillGithub } from 'react-icons/ai';
 
 const Footer = () => {
     return (
@@ -14,20 +11,25 @@ const Footer = () => {
                     <a
                         className='social'
                         href='https://github.com/kunalwadile-4442'
+                        target="_blank"
+                        rel="noreferrer"
                     > 
                         <AiFillGithub size='1.2em' />
                     </a>
                     <a
                         className='social'
                         href='https://www.instagram.com/_kunal.wadile_/'
+                        target="_blank"
+                        rel="noreferrer"
                     >
                         <AiFillInstagram size='1.2em' />
                     </a>
                     <a
                         className='social'
                         href='https://www.linkedin.com/in/kunal-wadile-773706258/'
+                        target="_blank"
+                        rel="noreferrer"
                     >
-                        {' '}
                         <AiFillLinkedin size='1.2em' />
                     </a>
                 </div>
@@ -42,29 +44,32 @@ const Footer = () => {
                     </div>
 
                     <p>
-                        {' '}
-                        made with ❤️‍🔥 by{' '}
+                        Made with ❤️‍🔥 by{' '}
                         <span className='heading'>Kunal Wadile</span>.
-                        {/* All Jams Preserved */}
                     </p>
                     <div className='footer-social-mobile'>
                         <a
                             className='social'
                             href='https://github.com/kunalwadile-4442'
+                            target="_blank"
+                            rel="noreferrer"
                         >
                             <AiFillGithub size='1.2em' />
                         </a>
                         <a
                             className='social'
-                            href='#'
+                            href='https://www.instagram.com/_kunal.wadile_/'
+                            target="_blank"
+                            rel="noreferrer"
                         >
                             <AiFillInstagram size='1.2em' />
                         </a>
                         <a
                             className='social'
                             href='https://www.linkedin.com/in/kunal-wadile-773706258/'
+                            target="_blank"
+                            rel="noreferrer"
                         >
-                            {' '}
                             <AiFillLinkedin size='1.2em' />
                         </a>
                     </div>
