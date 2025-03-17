@@ -1,6 +1,7 @@
 import React from "react";
 import './Projects.css';
 import { motion } from 'framer-motion';
+import { FaGithub } from 'react-icons/fa';
 
 export const SnapNote = require('../projectImg/snapNote.png');
 export const My_ai = require('../projectImg/my-ai.png');
@@ -93,14 +94,10 @@ const ProjectPage = () => {
                         <h3>{project.heading}</h3>
                         <p>{project.desc}</p>
                         <div className="project-links">
-                            <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                                GitHub Repo
+                            <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="github-link">
+                                <FaGithub className="github-icon" /> GitHub Repo
                             </a>
-                            {project.link !== '#' && (
-                                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                    Live Demo
-                                </a>
-                            )}
+                           
                         </div>
                     </motion.div>
                 ))}

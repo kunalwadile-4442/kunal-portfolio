@@ -55,15 +55,53 @@
 .project-links a {
     text-decoration: none;
     font-size: 0.9rem;
-    color: #007bff;
+    color: #6b47ff;;
     margin: 0 8px;
     transition: color 0.3s ease-in-out;
+    width: max-content;
+
 }
 
-.project-links a:hover {
-    color: #0056b3;
-}
 
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6e5494;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
+  }
+  
+  .github-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .github-link:hover {
+    color: #000;
+    
+  }
+  
+  .github-link:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .github-icon {
+    font-size: 1.5rem;
+  }
+  
 @media only screen and (max-width: 600px) {
     .myprojects {
         grid-template-columns: repeat(1, minmax(0, 1fr));
