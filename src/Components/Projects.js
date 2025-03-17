@@ -1,7 +1,7 @@
 import React from "react";
 import './Projects.css';
-import Project from './project/Project';
 import { motion } from 'framer-motion';
+import { FaGithub } from 'react-icons/fa';
 
 export const SnapNote = require('../projectImg/snapNote.png');
 export const My_ai = require('../projectImg/my-ai.png');
@@ -22,14 +22,14 @@ const projectObj = [
     {
         img: My_ai,
         heading: 'My Ai',
-        desc: 'A web application allowing solving thier sought using AI tool. Created using React.js nad Generative AI',
+        desc: 'A web application allowing solving their problems using AI tools. Built with React.js and Generative AI.',
         link: '#',
         githubLink: 'https://github.com/kunalwadile-4442/MY_AI',
     },
     {
         img: Shop,
         heading: 'Shopsy',
-        desc: 'A Shopsy website a animated landing page. Created using HTML and TailwindCSS',
+        desc: 'A visually engaging animated landing page for an e-commerce store, built with HTML and Tailwind CSS.',
         link: '#',
         githubLink: 'https://github.com/kunalwadile-4442/Fashion-Wear',
     },
@@ -43,21 +43,21 @@ const projectObj = [
     {
         img: Pj,
         heading: 'Personal Journal App',
-        desc: 'Secure journaling app with React frontend and Node.js backend. Safely write and manage personal notes with authentication.',
+        desc: 'Secure journaling app with a React frontend and Node.js backend. Features authentication for secure notes.',
         link: '#',
         githubLink: 'https://github.com/kunalwadile-4442/Personal-Journal-app',
     },
     {
         img: Netflix,
-        heading: 'Netflix',
-        desc: 'Netflix-inspired clone using React for a sleek, responsive user interface.',
+        heading: 'Netflix Clone',
+        desc: 'A sleek, responsive Netflix-inspired streaming UI, created using React.js and API integration.',
         link: '#',
         githubLink: '#',
     },
     {
         img: Dominos,
-        heading: 'Dominois',
-        desc: 'Replica of Dominos website using React.js for a dynamic and user-friendly interface.',
+        heading: 'Domino’s Clone',
+        desc: 'A visually appealing replica of the Domino’s website, built with React.js for a dynamic experience.',
         link: '#',
         githubLink: '#',
     },
@@ -65,28 +65,44 @@ const projectObj = [
 
 const ProjectPage = () => {
     return (
-        <>
-            <div id='projects'>
-                <div className='myprojects'>
-                    {projectObj.map((project, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <Project
-                                img={project.img}
-                                heading={project.heading}
-                                desc={project.desc}
-                                githubLink={project.githubLink}
-                                // link={project.link}
-                            />
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
-        </>
+        <div id='projects'>
+            <motion.div
+                className='myprojects'
+                initial="hidden"
+                animate="visible"
+                variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                        opacity: 1,
+                        transition: {
+                            staggerChildren: 0.2
+                        }
+                    }
+                }}
+            >
+                {projectObj.map((project, index) => (
+                    <motion.div
+                        key={index}
+                        className="project-card"
+                        variants={{
+                            hidden: { opacity: 0, y: 50 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <img src={project.img} alt={project.heading} />
+                        <h3>{project.heading}</h3>
+                        <p>{project.desc}</p>
+                        <div className="project-links">
+                            <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="github-link">
+                                <FaGithub className="github-icon" /> GitHub Repo
+                            </a>
+                           
+                        </div>
+                    </motion.div>
+                ))}
+            </motion.div>
+        </div>
     );
 };
 
