@@ -7,7 +7,7 @@ import Projects from "./Pages/projects";
 import TechStack from "./Pages/techStack";
 import Experience from "./Pages/experiance";
 import ClickSpark from "./Components/ClickSpark";
-import SplashCursor from "./Components/splashColor";
+import SplashCursor from "./Components/SplashColors";
 // import Achievement from "./Pages/Achivement";
 
 function App() {
