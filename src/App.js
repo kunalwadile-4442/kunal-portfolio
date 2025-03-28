@@ -6,11 +6,15 @@ import Home from "./Pages/home";
 import Projects from "./Pages/projects";
 import TechStack from "./Pages/techStack";
 import Experience from "./Pages/experiance";
+import ClickSpark from "./Components/ClickSpark";
+import SplashCursor from "./Components/splashColor";
 // import Achievement from "./Pages/Achivement";
 
 function App() {
   return (
     <>
+    <SplashCursor/>
+    <ClickSpark/>
       <Home />
       <NavPanel />
       <About />
