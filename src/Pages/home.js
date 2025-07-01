@@ -14,7 +14,7 @@ const Home = () => {
                     <h1 className='heading'>Kunal Wadile</h1>
                     <h2 className='flex role'>
                         <span className="typewriter-container">
-                            {/* <Typewriter
+                            <Typewriter
                                 options={{
                                     loop: true,
                                     autoStart: true,
@@ -32,7 +32,7 @@ const Home = () => {
                                         .pauseFor(1000)
                                         .start();
                                 }}
-                            /> */}
+                            />
                            
                         </span>
                     </h2>
