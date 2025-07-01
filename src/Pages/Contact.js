@@ -1,73 +1,91 @@
 import React from "react";
-import Footer from '../Components/Footer';
-import './Contact.css';
+import { useForm } from "react-hook-form";
+import { postData } from "../utils/api";
+import { showSuccess, showError } from "../utils/toastUtils";
+import Footer from "../Components/Footer";
+import "./Contact.css";
 
 const Contact = () => {
-    return (
-        <>
-            <hr />
-            <div id='contact'>
-                
-                <div className='contact-header'>
-            
-                    <h1 className='bold centre'>
-                        Contact Me
-                    </h1>
-                    {/* <a
-                        href='mailto:kunalwadile12@gmail.com'
-                        className='pc heading bold centre feedback'
-                    >
-                        kunalwadile12@gmail.com
-                    </a> */}
-                </div>
-                <form
-                    className='contact-form'
-                   action="https://formspree.io/f/moqggwnp" method="POST"
-                >
-                    <div className='form-group'>
-                        <input
-                            type='text'
-                            className='form-control'
-                            placeholder='Name'
-                            required
-                            name="name"
-                        />
-                    </div>
-                    <div className='form-group'>
-                        <input
-                            type='email'
-                            className='form-control'
-                            aria-describedby='emailHelp'
-                            placeholder='Email'
-                            required
-                            name="email"
-                        />
-                    </div>
-                    <div className='form-group'>
-                        <input
-                            type='text'
-                            className='form-control'
-                            placeholder='Subject'
-                            required
-                            name="subject"
-                        />
-                    </div>
-                    <div className='form-group'>
-                        <textarea
-                            className='form-control'
-                            rows='5'
-                            placeholder='Message'
-                            required
-                            name="message"
-                        />
-                    </div>
-                    <input type='submit' className='btn shine' value='Submit' />
-                </form>
-            </div>
-            
-            <Footer />
-        </>
-    );
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { isSubmitting },
+  } = useForm();
+
+    console.log("data",isSubmitting)
+
+ const onSubmit = async (data) => {
+  showSuccess("Sending your message..."); // show toast early
+
+  try {
+    await postData("/contact", data);
+    showSuccess("Message sent successfully! 🚀");
+    reset();
+  } catch (error) {
+    showError(error?.message || "Something went wrong!");
+  }
+};
+
+
+  return (
+    <>
+      <hr />
+      <div id="contact">
+        <div className="contact-header">
+          <h1 className="bold centre">Contact Me</h1>
+        </div>
+
+        <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Name"
+              {...register("name", { required: true })}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Email"
+              {...register("email", { required: true })}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Subject"
+              {...register("subject", { required: true })}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Phone"
+              {...register("phone", { required: true })}
+            />
+          </div>
+          <div className="form-group">
+            <textarea
+              className="form-control"
+              rows="5"
+              placeholder="Message"
+              {...register("message", { required: true })}
+            ></textarea>
+          </div>
+          <button type="submit" className="btn shine" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Submit"}
+          </button>
+        </form>
+      </div>
+
+      <Footer />
+    </>
+  );
 };
 
 export default Contact;
