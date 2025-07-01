@@ -101,10 +101,10 @@ const ClickSpark = ({
     sparksRef.current.push(...newSparks);
   };
 
-  useEffect(() => {
-    document.addEventListener("click", handleClick);
-    return () => document.removeEventListener("click", handleClick);
-  }, []);
+ useEffect(() => {
+  document.addEventListener("click", handleClick);
+  return () => document.removeEventListener("click", handleClick);
+}, [handleClick]); // ← fix here
 
   return (
     <canvas
