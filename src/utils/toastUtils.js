@@ -1,24 +1,17 @@
-// 📁 src/utils/toastUtils.js
 import { toast } from "react-toastify";
 
-export const showSuccess = (message = "Success") => {
+export const showSuccess = (message) => {
   toast.success(message, {
     position: "top-right",
-    autoClose: 3000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
+    autoClose: 4000,
+    theme: "colored", // ✅ colored background
   });
 };
 
-export const showError = (message = "Something went wrong") => {
+export const showError = (message) => {
   toast.error(message, {
     position: "top-right",
-    autoClose: 3000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
+    autoClose: 5000,
+    theme: "colored", // ✅ colored background
   });
 };

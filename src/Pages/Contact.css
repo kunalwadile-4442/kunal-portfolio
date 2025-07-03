@@ -120,4 +120,30 @@
     z-index: 1;
 }
 
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: flex;
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+.form-control.invalid {
+  border: 1px solid red;
+}
+
+.form-control.invalid:focus {
+  outline: none;
+  border-color: red;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
 
