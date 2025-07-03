@@ -10,7 +10,13 @@ const About = () => {
                     <div className='desc'>
                         <h1 className='bold'>About Me</h1>
                         <p>
-                        Hello, I am kunal wadile and I am  tech enthusiast with a knack for both front-end and back-end development. Proficient in frameworks like React and Node.js, and skilled in programming languages such as HTML, CSS, Tailwind CSS, JavaScript, and JQuery. Experienced in utilizing PHP and Express.js for backend development, and MySQL, PostgreSQL, and MongoDB for database management. Focused on creating user-friendly and responsive websites, I have enhanced my skill set with certifications in J.P. Morgan’s Software Engineering and Azure AI Fundamentals. Committed to staying updated with the latest in web development, I ensure that I deliver fresh and creative solutions every time.
+                       Hello! I’m Kunal Wadile, a passionate full-stack web developer with a strong focus on building modern, responsive, and user-friendly applications. I specialize in React.js for front-end development and Node.js with Express for robust back-end solutions.
+
+                    With hands-on experience across both front-end and back-end stacks, I bring ideas to life using technologies like HTML, CSS, Tailwind CSS, JavaScript, jQuery, and React. On the server side, I work confidently with Node.js, Express, PHP, and databases including MongoDB, MySQL, and PostgreSQL.
+
+                    I hold certifications in J.P. Morgan’s Software Engineering Virtual Experience and Microsoft’s Azure AI Fundamentals, reflecting my dedication to continuous learning and industry standards.
+
+                    Whether it’s creating seamless UI/UX experiences or optimizing backend APIs, I strive to deliver clean, scalable, and innovative solutions that solve real-world problems.
                             <Typewriter
                                 options={{
                                     // loop: true,

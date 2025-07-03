@@ -45,7 +45,7 @@ const Home = () => {
                         download 
                         style={{ textDecoration: 'none' }}
                     >
-                        Download Resume
+                        View Resume
                     </a>
                 </div>
 
@@ -89,7 +89,7 @@ const Home = () => {
                         download 
                         style={{ textDecoration: 'none' }}
                     >
-                        Download Resume
+                        View Resume
                     </a>
                 </div>
             </div>
