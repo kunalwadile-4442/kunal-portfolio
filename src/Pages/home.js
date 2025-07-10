@@ -28,7 +28,6 @@ const Home = () => {
     document.body.appendChild(link);
     link.click();
     link.remove();
-
     showSuccess("Resume download started!");
   } catch (err) {
     console.error("Download failed:", err);
