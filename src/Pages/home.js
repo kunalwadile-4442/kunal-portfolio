@@ -3,8 +3,40 @@ import Navbar from '../Components/Navbar';
 import './home.css';
 import kunal from '../images/kunal.jpeg';
 import Typewriter from 'typewriter-effect';
-
+import { showSuccess, showError } from "../utils/toastUtils";
 const Home = () => {
+
+  const handleDownloadResume = async () => {
+  const userId = process.env.REACT_APP_DEFAULT_USER_ID;
+  const BaseUrl = process.env.REACT_APP_BASE_URL;
+  const url = `${BaseUrl}/heroes/download-resume/${userId}`;
+
+  try {
+    // First, do a HEAD request to check if the PDF is reachable
+    const res = await fetch(url, {
+      method: "HEAD",
+    });
+
+    if (!res.ok) {
+      throw new Error("Resume not available");
+    }
+
+    // If file exists, trigger the actual download
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", "Kunal-Wadile-Resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    showSuccess("Resume download started!");
+  } catch (err) {
+    console.error("Download failed:", err);
+    showError("Resume not available or failed to download.");
+  }
+};
+
+
     return (
         <>
             <Navbar />
@@ -37,16 +69,14 @@ const Home = () => {
                         </span>
                     </h2>
                     <br />
-                    <a 
+                    <button 
                         className="btn shine" 
-                        href="https://drive.google.com/file/d/11vjj-Ds2poY8pZfMmSlm14fRoITyFUeq/view" 
-                        target="_blank" 
-                        rel="noreferrer" 
+                        onClick={handleDownloadResume}
                         download 
                         style={{ textDecoration: 'none' }}
                     >
-                        View Resume
-                    </a>
+                        Download Resume
+                    </button>
                 </div>
 
                 <div className='mobile'>
@@ -81,16 +111,14 @@ const Home = () => {
                 </div>
                 <div className="mobile">
                     <br />
-                    <a 
+                    <button 
                         className="btn shine" 
-                        href="https://drive.google.com/file/d/11vjj-Ds2poY8pZfMmSlm14fRoITyFUeq/view" 
-                        target="_blank" 
-                        rel="noreferrer" 
+                        onClick={handleDownloadResume}
                         download 
                         style={{ textDecoration: 'none' }}
                     >
-                        View Resume
-                    </a>
+                        Download Resume
+                    </button>
                 </div>
             </div>
             <hr />
