@@ -32,7 +32,7 @@ const Home = () => {
     showSuccess("Resume download started!");
   } catch (err) {
     console.error("Download failed:", err);
-    showError("Resume not available or failed to download.");
+    showError("Failed to download.");
   }
 };
 
